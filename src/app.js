@@ -36,7 +36,7 @@ app.post("/multiply", (req, res)=>{
 app.post("/divide", (req, res)=>{
   const {num1, num2} = req.body;
   if(num2 == 0){
-    return res.status(400).json({"message":"Cannot divide by zero"});
+    return res.status(400).json({"result":"Cannot divide by zero"});
   }
   const total = num1/num2;
   result(total, res)
